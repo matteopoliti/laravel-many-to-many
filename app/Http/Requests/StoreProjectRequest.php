@@ -26,7 +26,8 @@ class StoreProjectRequest extends FormRequest
             'description' => ['nullable'],
             'project_start_date' => ['nullable'],
             'cover_image' => ['nullable', 'image'],
-            'type_id' => ['nullable', 'exists:types,id']
+            'type_id' => ['nullable', 'exists:types,id'],
+            'technologies' => ['exists:technologies,id']
         ];
     }
 }
